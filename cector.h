@@ -126,10 +126,10 @@ free_new_item:\
     if(length_function_name(vector, &length) != success)\
       return failure;\
     \
+    length --;\
+    \
     if(length == 0)\
       return success;\
-    \
-    length --;\
     \
     realloc_contents_function_name(vector, length);\
     \

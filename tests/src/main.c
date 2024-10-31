@@ -18,7 +18,7 @@ int main(void) {
     goto cleanup;
   printf("[0]: %i\n", *my_int);
 
-  /*int_vector_pop(&vector);*/
+  int_vector_pop(&vector);
 
 cleanup:
   int_vector_uninit(&vector);

@@ -1,5 +1,6 @@
 #define INCLUDE_VECTOR_GENERATE_SOURCE_MACRO
 #include <int_vector.h>
+#include <stdio.h>
 
 VECTOR_GENERATE_SOURCE(int,
     int,
