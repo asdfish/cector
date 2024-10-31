@@ -1,7 +1,7 @@
 CC ?= cc
 C_FLAGS := -std=c99 $\
 					 -Wall -Wextra -Wpedantic $\
-					 -O2 -march=native -pipe $\
+					 -Og -g -march=native -pipe $\
 					 -I.. -Iinclude
 OBJECT_FILES := build/main.o build/int_vector.o
 DIRECTORIES := build
@@ -27,7 +27,7 @@ ${DIRECTORIES}:
 test: ${OBJECT_FILES}
 	${CC} ${OBJECT_FILES} -o test
 
-build/%.o: src/%.c
+build/%.o: src/%.c ../cector.h
 	${CC} -c $< ${C_FLAGS} -o $@
 
 .PHONY: all clean
